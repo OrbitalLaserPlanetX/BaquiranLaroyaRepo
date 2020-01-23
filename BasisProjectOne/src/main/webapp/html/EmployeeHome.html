@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Revature ERS Employee Home</title>
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel=stylesheet type="text/css" href="../css/loginstyle.css">
+<!------ Include the above in your HEAD tag ---------->
+
+</head>
+<body>
+	<div class="sidenav">
+	
+		<div class="titleEmp">
+			<h3>Please fill out the form below in order to submit your
+				expense ticket.</h3>
+		</div>
+		<form class="" id="TypeForm" method="POST" action="NewExpense.do">
+			<div class="dropdown">
+				<select class="btn-lg" class="ui dropdown" name="type"
+					form="TypeForm">
+					<option value="" selected disabled>Expense Type</option>
+					<option value="1">Lodging</option>
+					<option value="2">Travel</option>
+					<option value="3">Food</option>
+					<option value="4">Other</option>
+				</select> <br /> <br />
+			</div>
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text">Amount</span>
+				</div>
+				<input type="number" step=".01" min="0.01" class="form-control"
+					name="Amount" aria-label="Amount (to the nearest dollar)">
+			</div>
+
+			<div class="form-group">
+				<label for="exampleTextarea" id="Desc">Description</label>
+				<textarea class="form-control" id="exampleTextarea"
+					name="Description" rows="3"></textarea>
+			</div>
+			<div class="form-group">
+				<input type="Submit" class="form-control btn" id="SubmitButton"
+					value="Submit">
+			</div>
+		</form>
+	<div>
+	<a href="http://localhost:8080/Project1/html/Login.html">
+	<img src="../img/logoutwhite.png" alt="Logout" style="width:50px;height:50px; margin-top:20%; margin-left:1%;">
+	</a>
+	</div>	
+	</div>
+	
+	
+	<div class= "main">
+		<br><br>
+	
+		<div class="login-form2">
+	
+			<span id="login-form2-span" style="font-size: 40px; width:100%; color: black; padding:0px 0px;">
+			Submitted Expense Tickets
+			</span>
+			
+		</div>
+	<div style="width: 100%; height: 25px;"></div>
+	<div class="container">
+		<div class="form-group">
+			<table border="2" class="table" id="reimbtable">
+			<tr>
+				<th>Ticket Id</th>
+				<th>Expense type</th>
+				<th>Amount</th>
+				<th>Date Submitted</th>
+				<th>Date Resolved</th>
+				<th>Reimbursement Status</th>
+				<th>Ticket Description</th>
+			</tr>
+		</table>
+	</div>
+	</div>
+</div>
+	
+<script type="text/javascript" src="../js/employeehome.js"></script>
+
+</body>
+</html>

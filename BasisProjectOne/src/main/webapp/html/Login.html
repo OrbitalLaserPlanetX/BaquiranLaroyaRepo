@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Revature ERS Login</title>
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel=stylesheet type="text/css" href="../css/loginstyle.css">
+<!------ Include the above in your HEAD tag ---------->
+</head>
+<body>
+<div class="login-main-text">
+
+<div id="sideBar" class="sidenav">
+	<div class="login-main-text">
+		<h2 style= "text-align: right;">Welcome to Revature's</h2>
+	    <br>
+	    <br>
+		<h2 style= "text-align: right; ">Account Registration</h2>
+		<div class="gimspace">
+			<div class="login-form">
+		<h4>Register Here</h4>
+		<div style="align-content: center;">
+			<form method="POST" action="Register.do">
+				<label>First name &nbsp&nbsp</label>
+				<input id="formFirstName" onchange="changeColor()"  type="text" name="firstname" placeholder="Enter your first name"/><br><br>
+				<label>Last name &nbsp&nbsp</label>
+				<input id="formLastName" onchange="changeColor()" type="text" name="lastname" placeholder="Enter your last name"/><br><br>
+				<label>Username &nbsp</label>
+				<input id="formUserName" onchange="changeColor()" type="text" name="username" placeholder="Enter your username"/><br><br>
+				<label>Password &nbsp&nbsp</label>
+				<input id="formPassword" onchange="changeColor()" type="text" name="password" placeholder="Enter your password"/><br><br>				
+				<label>Email &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+				<input id="formMan2" onchange="changeColor()" type="text" name="email" placeholder="Enter your Email"/><br><br>
+				<span id="formMan" >What's the user's role?
+				<select name="type">
+					<option value="" selected disabled>User's role</option>
+					<option value="Employee">Employee</option>
+					<option value="Manager">Manager</option>
+				</select></span>
+		    	<br>	
+		    	<br>
+				<input type="submit" class="btn btn-white" value="Register" onclick="successFunction()"/>
+			</form>
+					<h5 id="nice" style="color:white"></h5>
+		</div>
+			</div>
+	</div>
+	</div>
+</div>
+</div>
+<div class="main">
+<div class="login-main-text">
+
+	<h2 style="color: black; margin-top: -20px;margin-left: -17px;">Expense Reimbursement System</h2>
+	<br>
+	<br>
+	<br>
+	<h2 style="color: black; margin-top: -22px;margin-left: -17px;">And Login Page</h2>
+	<br>
+	<br>
+	<br>
+
+	<div class="col-md-6 col-sm-12">
+		<div class="login-form">
+			<h3 style="color:black; margin-top: -9.5%;">Login Here</h3>
+	<form id="login-form" method="POST" action="Login.do" role="form" style="display: block;">
+		<div class="form-group">
+		<input type="text" name="username" id="username" tabindex="1"
+		class="form-control" placeholder="Username" value="">
+		</div>
+		<div class="form-group">
+		<input type="password" name="password" id="password"
+		tabindex="2" class="form-control" placeholder="Password" value="">
+		</div>
+	<div class="form-group">
+		<div class="row">
+		<div class="col-sm-6 col-sm-offset-3">
+		<input type="Submit" class="btn btn-black" id="LoginButton" value="Login">
+		</div>
+	</div>
+	</div>
+	</form>							
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+	function changeColor(){
+		let firstName = document.getElementById("formFirstName").value;
+		let lastName = document.getElementById("formLastName").value;
+		let userName = document.getElementById("formUserName").value;
+		let password = document.getElementById("formPassword").value;
+		let man = document.getElementById("formMan").value;
+		let man2 = document.getElementById("formMan2").value;
+
+		if(firstName.length!=0&&lastName.length!=0&&userName.length!=0&&password.length!=0&&man2.length!=0){
+			document.getElementById("sideBar").style.backgroundColor="red";
+		}else{
+			document.getElementById("sideBar").style.backgroundColor="black";
+		}
+	}
+	
+	function successFunction(){
+		document.getElementById("nice").innerHTML = "You have successfuly created an account! redirecting. . .";
+	}
+</script>
+</body>
+</html>
